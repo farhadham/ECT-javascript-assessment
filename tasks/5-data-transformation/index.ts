@@ -9,7 +9,7 @@ type AggregatedResultType = { [key: string]: number };
  * This function takes an array of objects, where each object has a `key` and a `value`,
  * and aggregates the values based on the `key`. If a key appears multiple times in
  * the input array, their values are summed up in the output object.
- * Suitable for small arrays
+ * Suitable for small arrays ~< 50000 items
  *
  * @param arr - An array of objects where each object has:
  *   - `key` (string): The key by which the aggregation is performed.
@@ -29,7 +29,7 @@ export const transformSmallArray = (arr: ListDataType[]) => {
  * This function takes an array of objects, where each object has a `key` and a `value`,
  * and aggregates the values based on the `key`. If a key appears multiple times in
  * the input array, their values are summed up in the output object.
- * Suitable for Large arrays
+ * Suitable for Large arrays ~> 50000 items
  *
  * @param arr - An array of objects where each object has:
  *   - `key` (string): The key by which the aggregation is performed.
