@@ -43,9 +43,9 @@ export class TestClass {
   }
 }
 
-function demonstrateSingletonClass() {
+const demonstrateSingletonCreator = () => {
   console.log(
-    `\n--------------\nGeneric singleton creator using "Class" keyword\n--------------`,
+    `--------------\nGeneric singleton creator using "Class" keyword\n--------------\n`,
   );
   // Initializing the singleton instance
   const singleton1 = new Utility.SessionSingleton(TestClass);
@@ -78,6 +78,6 @@ function demonstrateSingletonClass() {
     'Are singleton instances from class the same?',
     instance1 === instance2, // Output: true
   );
-}
+};
 
-demonstrateSingletonClass();
+demonstrateSingletonCreator();

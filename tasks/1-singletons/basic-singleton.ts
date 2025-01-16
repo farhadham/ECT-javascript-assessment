@@ -35,9 +35,9 @@ export class SingletonIncrementor {
 // -------------
 // Usage example
 // -------------
-function demonstrateSingletonClass() {
+const demonstrateSingletonClass = () => {
   console.log(
-    `\n--------------\nBasic Singleton using "Class" keyword\n--------------`,
+    `--------------\nBasic Singleton using "Class" keyword\n--------------\n`,
   );
   // Retrieve the singleton instance
   const singleton1 = SingletonIncrementor.getInstance();
@@ -57,6 +57,6 @@ function demonstrateSingletonClass() {
     'Are singleton instances from class the same?',
     singleton1 === singleton2, // Output: true
   );
-}
+};
 
 demonstrateSingletonClass();

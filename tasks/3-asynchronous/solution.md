@@ -77,16 +77,16 @@ The Promise.all method waits for all the promises in the promises array to resol
 **This will result in the numbers from 0 to 9 being logged sequentially, one per second.**
 
 ```
-async function logKeys() {
+const logKeys = async () => {
   for (let key = 0; key < 10; key++) {
-    await new Promise(resolve => {
+    await new Promise((resolve) => {
       setTimeout(() => {
         console.log('Index', key);
         resolve(key);
       }, 1000);
     });
   }
-}
+};
 
 logKeys();
 ```
