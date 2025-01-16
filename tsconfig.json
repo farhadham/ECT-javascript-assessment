@@ -7,13 +7,9 @@
     "skipLibCheck": true,
     "outDir": "./dist",
     "rootDir": ".",
-    "allowJs": true, // Allow JavaScript files to be compiled
-    "checkJs": false // Don't type-check JavaScript files
+    "allowJs": true,
+    "checkJs": false
   },
   "include": ["**/*.ts", "**/*.js"],
-  "exclude": [
-    "node_modules",
-    "**/*.test.js",
-    "dist" // Exclude the dist folder to prevent recompilation
-  ]
+  "exclude": ["node_modules", "**/*.test.js", "dist"]
 }
