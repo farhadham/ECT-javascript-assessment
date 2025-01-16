@@ -35,7 +35,7 @@ export class SingletonIncrementor {
 // -------------
 // Usage example
 // -------------
-const demonstrateSingletonClass = () => {
+const runDemos = () => {
   console.log(
     `--------------\nBasic Singleton using "Class" keyword\n--------------\n`,
   );
@@ -59,4 +59,4 @@ const demonstrateSingletonClass = () => {
   );
 };
 
-demonstrateSingletonClass();
+runDemos();

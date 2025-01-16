@@ -50,7 +50,7 @@ export const transformLargeArray = (arr: ListDataType[]) => {
 // -------------
 // Usage example
 // -------------
-const demonstrateDataTransformation = () => {
+const runDemos = () => {
   console.log(
     `--------------\nTransforming and aggregating array to object\n--------------\n`,
   );
@@ -65,4 +65,4 @@ const demonstrateDataTransformation = () => {
   console.log('Result', result);
 };
 
-demonstrateDataTransformation();
+runDemos();

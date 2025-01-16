@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 
-import { Counter, Monitor } from '../index';
+import { Counter } from '..';
+import { Monitor } from '../monitor';
 
 describe('Counter and Monitor Classes', () => {
   it('Counter increments correctly', () => {

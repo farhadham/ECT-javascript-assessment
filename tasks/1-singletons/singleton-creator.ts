@@ -43,7 +43,7 @@ export class TestClass {
   }
 }
 
-const demonstrateSingletonCreator = () => {
+const runDemos = () => {
   console.log(
     `--------------\nGeneric singleton creator using "Class" keyword\n--------------\n`,
   );
@@ -80,4 +80,4 @@ const demonstrateSingletonCreator = () => {
   );
 };
 
-demonstrateSingletonCreator();
+runDemos();
