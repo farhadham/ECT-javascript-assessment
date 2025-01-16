@@ -1,3 +1,5 @@
+# Code Review
+
 ### Original Snippet
 
 ```
@@ -52,3 +54,17 @@ function process(data) {
   });
 }
 ```
+
+---
+
+# Debugging
+
+### Log
+
+```
+Input: [1, 2, [3, [4, 5]]]
+Output: Error: Maximum call stack size exceeded
+```
+
+It appears we are encountering a stack overflow because of deep recursion, most likely while trying to process a nested array structure.
+The current code may be using siple recursion without handling base cases properly
