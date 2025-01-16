@@ -27,7 +27,7 @@ function process(data) {
 
 ### Suggested Code
 
-```
+```js
 async function fetchData() {
   try {
     const response = await fetch('https://api.example.com/data');
@@ -61,7 +61,7 @@ function process(data) {
 
 ### Log
 
-```
+```bash
 Input: [1, 2, [3, [4, 5]]]
 Output: Error: Maximum call stack size exceeded
 ```

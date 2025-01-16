@@ -4,7 +4,7 @@
 
 Scenario: When creating a library of utility functions, static classes are the best choice. These functions don't depend on maintaining any internal state and only perform specific tasks.
 
-```
+```js
 class MathUtils {
   static add(a, b) {
     return a + b;
@@ -16,8 +16,8 @@ class MathUtils {
 }
 
 // Usage
-console.log(MathUtils.add(5, 3));  // Output: 8
-console.log(MathUtils.subtract(5, 3));  // Output: 2
+console.log(MathUtils.add(5, 3)); // Output: 8
+console.log(MathUtils.subtract(5, 3)); // Output: 2
 ```
 
 ### Explanation:
@@ -31,7 +31,7 @@ console.log(MathUtils.subtract(5, 3));  // Output: 2
 
 Scenario: When managing application configuration, a singleton is required. This makes sure that only one consistent configuration object exists in thw whole application.
 
-```
+```js
 class AppConfig {
   constructor() {
     if (AppConfig.instance) {
@@ -55,7 +55,7 @@ const config1 = new AppConfig();
 config1.set('theme', 'dark');
 
 const config2 = new AppConfig();
-console.log(config2.get('theme'));  // Output: 'dark'
+console.log(config2.get('theme')); // Output: 'dark'
 ```
 
 ### Explanation:
@@ -69,7 +69,7 @@ console.log(config2.get('theme'));  // Output: 'dark'
 
 Scenario: Managing a database connection pool requires a singleton. Using multiple connections unnecessarily consumes resources and may lead to conflicts.
 
-```
+```js
 class DatabaseConnection {
   constructor() {
     if (DatabaseConnection.instance) {
@@ -93,8 +93,8 @@ class DatabaseConnection {
 const db1 = new DatabaseConnection();
 const db2 = new DatabaseConnection();
 
-console.log(db1.getConnection());  // Output: { connected: true }
-console.log(db1 === db2);          // Output: true
+console.log(db1.getConnection()); // Output: { connected: true }
+console.log(db1 === db2); // Output: true
 ```
 
 ### Explanation:

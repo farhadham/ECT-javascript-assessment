@@ -4,9 +4,9 @@
 
 **This will result in the numbers from 0 to 9.**
 
-```
+```js
 for (let key = 0; key < 10; key++) {
-  setTimeout(function() {
+  setTimeout(function () {
     console.log('Index', key);
   }, 1000);
 }
@@ -23,9 +23,9 @@ Since `let` keyword declares a block-scoped variable, each iteration has its on 
 
 **This will result in the number 10 being logged ten times.**
 
-```
+```js
 for (var key = 0; key < 10; key++) {
-  setTimeout(function() {
+  setTimeout(function () {
     console.log('Index', key);
   }, 1000);
 }
@@ -44,17 +44,17 @@ As a result, all the setTimeout callbacks will log the same value (10), because 
 
 **This will result in the numbers from 0 to 9 being logged, followed by "All operations completed".**
 
-```
+```js
 const promises = [];
 
 for (let key = 0; key < 10; key++) {
   promises.push(
-    new Promise(resolve => {
+    new Promise((resolve) => {
       setTimeout(() => {
         console.log('Index', key);
         resolve(key);
       }, 1000);
-    })
+    }),
   );
 }
 
@@ -76,7 +76,7 @@ The Promise.all method waits for all the promises in the promises array to resol
 
 **This will result in the numbers from 0 to 9 being logged sequentially, one per second.**
 
-```
+```js
 const logKeys = async () => {
   for (let key = 0; key < 10; key++) {
     await new Promise((resolve) => {
