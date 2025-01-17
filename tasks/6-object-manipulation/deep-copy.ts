@@ -1,4 +1,4 @@
-export const deepCopy = <T>(obj: T, visited = new WeakMap()): T => {
+export const deepCopy = <T>(obj: T, visited = new Map()): T => {
   // Handling null and primitives base case
   if (obj === null || typeof obj !== 'object') {
     return obj;
