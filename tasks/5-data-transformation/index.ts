@@ -50,19 +50,14 @@ export const transformLargeArray = (arr: ListDataType[]) => {
 // -------------
 // Usage example
 // -------------
-const runDemos = () => {
-  console.log(
-    `--------------\nTransforming and aggregating array to object\n--------------\n`,
-  );
+export const runDemos = () => {
   const testArray = [
     { key: 'A', value: 1 },
     { key: 'C', value: 2 },
     { key: 'B', value: 3 },
     { key: 'A', value: 5 },
   ];
-  console.log('Transforming array:', testArray);
+  console.log('Input data', testArray);
   const result = transformSmallArray(testArray);
-  console.log('Result', result);
+  console.log('\nResult of transformation', result);
 };
-
-runDemos();

@@ -57,10 +57,7 @@ export class Counter {
 // -------------
 // Usage example
 // -------------
-const runDemos = () => {
-  console.log(
-    `--------------\nObserver and observable patter\n--------------\n`,
-  );
+export const runDemos = () => {
   // Create counters
   const counter1 = new Counter('Counter1');
   const counter2 = new Counter('Counter2');
@@ -81,7 +78,7 @@ const runDemos = () => {
     'finished incrementing Counter1: 3 times - No warning for threshold of 10',
   );
 
-  console.log('Incrementing Counter2: 12 times');
+  console.log('\nIncrementing Counter2: 12 times');
   for (let i = 0; i < 12; i++) {
     counter2.increment();
   }
@@ -90,5 +87,3 @@ const runDemos = () => {
   );
   counter1.reset();
 };
-
-runDemos();

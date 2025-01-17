@@ -49,7 +49,7 @@ export const isEqual = (obj1: any, obj2: any): boolean => {
 // -------------
 // Usage example
 // -------------
-const runDemos = () => {
+export const runDemos = () => {
   console.log(isEqual(null, undefined)); // true
   console.log(isEqual({ a: 1, b: [2, 3], c: null }, { a: 1, b: [2, 3] })); // true
   console.log(isEqual(new Date('2023-01-01'), new Date('2023-01-01'))); // true
@@ -57,5 +57,3 @@ const runDemos = () => {
   console.log(isEqual([{ a: 1, b: [2, 3] }], [{ a: 1, b: [2, 3] }])); // true
   console.log(isEqual([1, 2, 3], [1, 2, 4])); // false
 };
-
-runDemos();

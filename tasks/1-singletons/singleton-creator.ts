@@ -43,10 +43,7 @@ export class TestClass {
   }
 }
 
-const runDemos = () => {
-  console.log(
-    `--------------\nGeneric singleton creator using "Class" keyword\n--------------\n`,
-  );
+export const runDemos = () => {
   // Initializing the singleton instance
   const singleton1 = new Utility.SessionSingleton(TestClass);
 
@@ -79,5 +76,3 @@ const runDemos = () => {
     instance1 === instance2, // Output: true
   );
 };
-
-runDemos();

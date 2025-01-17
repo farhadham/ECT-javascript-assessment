@@ -39,13 +39,14 @@ export const deepCopy = <T>(obj: T, visited = new Map()): T => {
 // -------------
 // Usage example
 // -------------
-const runDemos = () => {
+export const runDemos = () => {
   const obj1 = {
     a: 1,
     b: 'string',
     c: { nested: true },
     d: [1, 2, 3],
   };
+  console.log('Input 1:', obj1);
   console.log('Test 1:', deepCopy(obj1));
 
   // Test 2: Circular reference
@@ -55,7 +56,7 @@ const runDemos = () => {
   };
   obj2.circular = obj2;
   const copy2 = deepCopy(obj2);
+  console.log('\nInput 2:', obj2);
+  console.log('Test 2:', copy2);
   console.log('Test 2 - Circular reference handled:', copy2.circular === copy2);
 };
-
-runDemos();
