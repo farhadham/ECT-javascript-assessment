@@ -16,6 +16,9 @@ export class Monitor {
    * @param counterValue - The current value of the counter.
    */
   update(counterId: string, counterValue: number) {
+    console.log(
+      `Counter ${counterId} is incremented. Current value is: ${counterValue}`,
+    );
     if (counterValue > this.threshold) {
       console.log(
         `WARNING! Counter ${counterId} has passed the limit of ${this.threshold} and currently has the value of ${counterValue}`,
